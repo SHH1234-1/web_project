@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace = "com.koreadeal.web.DAO.JoinDAO">
+
+<select id="idCheck" resultType="Integer">
+	SELECT 
+		COUNT(*) 
+	FROM 
+		user_mst
+	WHERE
+		user_id = #{join_id};		
+	</select>
+<insert id="joinInsert" parameterType="com.koreadeal.web.beans.UserBean">
+	insert into
+		user_mst(
+		user_id,
+		user_pwd,
+		user_name,
+		user_email,
+		user_birthday,
+		
+		createdate,
+		updatedate
+	)
+	values(
+		#{user_id},
+		#{user_pwd},
+		#{user_name},
+		#{user_email},
+		#{user_birthday},
+		
+		now(),
+		now()		
+	);	
+</insert>		
+</mapper>	
