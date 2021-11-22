@@ -17,11 +17,11 @@
         <div id="login_content">
         
             <form method="post" id="adminloginform" action="adminloginCheck">
-                
+                              <input type="hidden" id="loginflag" name="login_flag" value="${adminloginmodel.login_flag}">
                 <div class="id_area">
                     <div class="input_row">
                         <span class="input_box">
-                            <input type="text" id="id" name="admin_user_id" class="input_text" placeholder="관리자 아이디" value="${adminloginModel.login_id }">
+                            <input type="text" id="id" name="admin_user_id" class="input_text" placeholder="관리자 아이디" value="${adminloginModel.admin_user_id }">
                         </span>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="pwd_area">
                     <div class="input_row">
                         <span class="input_box">
-                            <input type="password" id="pwd" name="admin_user_pwd" class="input_text" placeholder="관리자 비밀번호" value="${adminloginModel.login_pwd }">
+                            <input type="password" id="pwd" name="admin_user_pwd" class="input_text" placeholder="관리자 비밀번호" value="${adminloginModel.admin_user_pwd }">
                         </span>
                     </div>
                 </div>

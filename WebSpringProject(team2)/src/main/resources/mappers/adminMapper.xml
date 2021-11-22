@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.koreadeal.web.DAO.AdminDAO">
+
+<select id="getUserBean" resultType="com.koreadeal.web.beans.AdminUserBean">
+	select
+		admin_user_id,
+		admin_user_pwd,
+		admin_user_name;
+	from
+		admin_mst
+	where
+		admin_user_id = #{admin_user_id};	
+	</select>
+	
+<select id ="admin_loginCheck" resultType="com.koreadeal.web.beans.AdminUserBean">
+	select
+		m.admin_user_id,
+		s.admin_user_pwd
+	from
+		admin_mst m
+		left outer join admin_mst s on(s.admin_user_id = m.admin_user_id and s.user_pwd = #{admin_user_pwd})
+	where
+		m.admin_user_id = #{admin_user_id};		
+</select>	
+	
+</mapper>
