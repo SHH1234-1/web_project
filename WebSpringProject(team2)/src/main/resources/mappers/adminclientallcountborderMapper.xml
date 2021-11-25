@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.koreadeal.web.DAO.AdminClientAllCountborderDAO">
+
+<select id="getUserList" resultType="com.koreadeal.web.beans.UserBean">
+	select
+			*
+	from
+			user_mst;		
+</select>
+
+</mapper>

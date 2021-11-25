@@ -14,7 +14,7 @@ import com.koreadeal.web.model.AdminLoginModel;
 import com.koreadeal.web.service.AdminService;
 
 @Controller
-public class AdminController {
+public class AdminLoginController {
 	
 	@Autowired
 	private AdminService adminService;
@@ -34,7 +34,7 @@ public class AdminController {
 	}
 	
 	return mav;
-	
+	}
 	@RequestMapping(value= "/admin_loginCheck", method = RequestMethod.POST)
 	public ModelAndView admin_loginCheck(AdminLoginModel adminloginmodel, HttpServletRequest request) {
 		HttpSession session = request.getSession();
@@ -49,9 +49,9 @@ public class AdminController {
 			return mavAdminLoginSuccess;
 		}else {
 				ModelAndView mavAdminLoginFailure = new ModelAndView("/admin_login");
-				AdminLoginModel adminloginmodel1 = adminService.getAdminLoginModel();
-				mav.addObject("adminloginmodel",adminloginmodel1);
+				return mavAdminLoginFailure;
 		}
+		
 	}
 	
 	@RequestMapping(value ="/logout", method = RequestMethod.GET)
@@ -61,6 +61,11 @@ public class AdminController {
 		ModelAndView view = new ModelAndView("/home");
 		return view;
 	}
+	
+	
+	
+	
+
 	
 	
 	
