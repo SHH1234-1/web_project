@@ -36,7 +36,7 @@ public class BorderController {
 	@Autowired
 	BorderDtlService borderDtlService;
 	           
-	@RequestMapping(value = "/border", method = RequestMethod.GET)
+	@RequestMapping(value = "/border/border", method = RequestMethod.GET)
 	public ModelAndView borderIndex() {
 		ModelAndView view = new ModelAndView("/border/border");  
 		BorderList model = new BorderList();
@@ -63,7 +63,7 @@ public class BorderController {
 		return view;
 	}
 	
-	@RequestMapping(value ="/borderinsert", method = RequestMethod.GET)
+	@RequestMapping(value ="/border/borderinsert", method = RequestMethod.GET)
 	public ModelAndView borderinsert () {
 		ModelAndView view = new ModelAndView("/borderinsert");
 		return view;
@@ -75,7 +75,7 @@ public class BorderController {
 		return view;
 	}
 	
-	@RequestMapping(value="/borderdtl", method = RequestMethod.GET)
+	@RequestMapping(value="/border/borderdtl", method = RequestMethod.GET)
 	public ModelAndView borderDtl(@RequestParam("border_code")String border_code,@RequestParam("page")String page) {
 	ModelAndView view = new ModelAndView("/border/borderdtl");
 	BorderDtlModel model = borderDtlService.getBorderDtlModel(border_code);

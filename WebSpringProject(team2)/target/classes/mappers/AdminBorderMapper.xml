@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace = "com.koreadeal.web.DAO.AdminBorderDAO">
+
+<select id ="getBorderBean" resultType="com.koreadeal.web.beans.BorderBean">
+	select
+			*
+	from
+			border_dtl;		
+
+</select>
+</mapper>

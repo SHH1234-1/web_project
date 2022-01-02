@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/admincontrol.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/border/borderdtl.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/border/borderdtlcontrol.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/client_all_count.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/clientcontrol.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/join.jsp=UTF-8
